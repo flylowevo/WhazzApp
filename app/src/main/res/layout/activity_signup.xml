@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.dajo.whazzapp.ui.SignupActivity">
+
+    <TextView
+        android:id="@+id/signupLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/signup_label"
+        android:textSize="50sp"/>
+
+
+    <TextView
+        android:id="@+id/signupPlusSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/signupCountryCode"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/signupCountryCode"
+        android:layout_marginTop="10dp"
+        android:text="@string/plus_sign_label"/>
+
+    <EditText
+        android:id="@+id/signupCountryCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/signupPlusSign"
+        android:layout_toRightOf="@+id/signupPlusSign"
+        android:width="50dp"
+        android:hint="@string/hint_country_code"
+        android:inputType="number"
+        android:layout_above="@+id/signupBtn"/>
+
+    <EditText
+        android:id="@+id/loginNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/signupCountryCode"
+        android:layout_toRightOf="@+id/signupCountryCode"
+        android:hint="@string/hint_phone_number"
+        android:inputType="phone"
+        android:layout_above="@+id/signupBtn"/>
+
+    <Button
+        android:id="@+id/signupBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="@string/signup_button_verification"/>
+
+    <EditText
+        android:id="@+id/pinNumber"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/signup_pin_number"
+        android:layout_above="@+id/signupBtn"
+        android:inputType="number"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/verifyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="@string/signup_button_verification"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
